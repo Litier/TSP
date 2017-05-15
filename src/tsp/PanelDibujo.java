@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tsp;
 
 import java.awt.Dimension;
@@ -13,19 +9,23 @@ import javax.swing.JPanel;
 
 
 /**
- *
+ * Esta clase es el panel de dibujo, donde será pintada las ciudades y el camino recorrido
  * @author JavierAros
  */
 public class PanelDibujo extends JPanel {
 
     public PanelDibujo(){
-
+        //dimensiones del panel
         setPreferredSize( new Dimension( 600, 600 ) );
+        //pinta de blanco el fondo
         setBackground(new java.awt.Color(255,255,255));
        
       
     }
 
+    /**
+    * Método que es llamado para pintar el Jpanel, puede ser llamado utilizando el metodo repaint()
+    */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
