@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tsp;
 
 import java.io.File;
@@ -11,7 +6,7 @@ import java.util.Collections;
 import javax.swing.JFileChooser;
 
 /**
- *
+ * Esta clase es el JFrame que contiene la parte visual
  * @author JavierAros
  */
 public class Grafico extends javax.swing.JFrame {
@@ -20,8 +15,11 @@ public class Grafico extends javax.swing.JFrame {
     public Grafico(){
      initUI();
     }
-
+    /**
+    * Método que inicializa la clase
+    */
     private void initUI() {
+        //evita el cambio de dimenciones
         setResizable(false);
         jPanel1 = new PanelDibujo();
         jLabel1 = new javax.swing.JLabel();
@@ -30,6 +28,7 @@ public class Grafico extends javax.swing.JFrame {
         jLabelCosto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        //titulo del Jframe
         setTitle("TSP");
         setMinimumSize(new java.awt.Dimension(WIDTH, HEIGHT));
         setPreferredSize(new java.awt.Dimension(WIDTH, HEIGHT));
@@ -47,7 +46,7 @@ public class Grafico extends javax.swing.JFrame {
         );
 
         jLabel1.setText("Costo de la solución:");
-
+        //inicialización del botón que permite generar permutaciones
         jButtonGenerarPermutacion.setText("Generar permutacion");
         jButtonGenerarPermutacion.setToolTipText("");
         jButtonGenerarPermutacion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -57,6 +56,7 @@ public class Grafico extends javax.swing.JFrame {
             }
         });
 
+        //inicialización del botón que permite cargar archivos
         jButtonCargar.setText("Cargar archivo");
         jButtonCargar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,10 +106,18 @@ public class Grafico extends javax.swing.JFrame {
         pack();      
     }        
 
+    /**
+    * Método que utiliza la información cargada en la clase FileTSP para actualizar el panel de dibujo (JPanel)
+    * @param evt El parámetro es el evento generado al apretar el botón
+    */
     private void jButtonGenerarPermutacionActionPerformed(java.awt.event.ActionEvent evt) {                                         
       
     }                                        
 
+    /**
+    * Método que llama a un fileChooser, para seleccionar un archivo .tsp, para luego inicializar la clase FileTSP
+    * @param evt El parámetro es el evento generado al apretar el botón
+    */
     private void jButtonCargarActionPerformed(java.awt.event.ActionEvent evt) {                                         
 
     }  
